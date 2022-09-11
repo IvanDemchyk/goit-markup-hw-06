@@ -56,7 +56,16 @@ img {
   padding-bottom: 94px;
 }
 
-/* Header styles */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+/*======================= Header styles======================== */
 .page-header {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -167,18 +176,26 @@ img {
 .phone-link:focus .phone-svg {
   fill: var(--accent-color);
 }
-/* Footer styles */
+
+/*======================= Header styles ======================= */
+
+/*======================= Footer styles =======================*/
 
 .footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer-contacts-wrapper {
   display: flex;
   gap: 70px;
   align-items: baseline;
 }
+
 .footer {
   background-color: var(--secondary-background);
   color: var(--tertiary-text-color);
-}
-.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -220,7 +237,7 @@ img {
   color: var(--accent-color);
 }
 
-.join-title {
+.footer-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -257,7 +274,67 @@ img {
   fill: var(--tertiary-text-color);
 }
 
-/* Головний заголовок */
+.footer-form {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-email {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--tertiary-text-color);
+  background-color: inherit;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: border-color var(--animation-link);
+}
+
+.footer-email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.footer-button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  align-items: center;
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+  gap: 10px;
+  background-color: var(--accent-color);
+  color: var(--tertiary-text-color);
+  border-radius: 4px;
+  border: none;
+  transition: background-color var(--animation-link);
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: var(--hover-button-color);
+}
+.join-icon {
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  fill: var(--tertiary-text-color);
+}
+/*======================= Footer styles =======================*/
+
+/*=================== Головний заголовок =====================*/
 .hero {
   background-color: var(--secondary-background);
   background-image: linear-gradient(
@@ -301,11 +378,13 @@ img {
   padding: 10px 32px;
   border-radius: 4px;
   border: none;
-  transition: background-color var(--animation-link);
+  transition: background-color var(--animation-link),
+    box-shadow var(--animation-link);
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--hover-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Наші особливості */
 .visually-hidden {
@@ -356,15 +435,11 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
-/* Чим ми займаємось */
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
+
+/*=================== Головний заголовок =====================*/
+
+/* =====================Чим ми займаємось ====================*/
+
 .list-work {
   display: flex;
   justify-content: space-between;
@@ -392,7 +467,10 @@ img {
   color: var(--tertiary-text-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
-/* Наша команда */
+
+/* =====================Чим ми займаємось ====================*/
+
+/* =========================Наша команда =====================*/
 .team {
   background-color: var(--tertiary-background);
 }
@@ -464,7 +542,9 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* Наші клієнти */
+/* =========================Наша команда =====================*/
+
+/* ==========================Наші клієнти ====================*/
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -489,6 +569,7 @@ img {
   height: 92px;
   border-radius: 4px;
   border: 1px solid var(--logo-color);
+  transition: border var(--animation-link);
 }
 
 .client-link:hover,
@@ -503,8 +584,12 @@ img {
   width: 106px;
   height: 60px;
   fill: var(--logo-color);
+  transition: fill var(--animation-link);
 }
-/* Сторінка портфолоіо */
+
+/* ==========================Наші клієнти ====================*/
+
+/* ==========================Сторінка портфолоіо ==============*/
 
 .portfolio-menu {
   display: flex;
@@ -606,7 +691,9 @@ img {
   transform: translateY(0%);
 }
 
-/* Модальне вікно */
+/* ==========================Сторінка портфолоіо ==============*/
+
+/* ============================Модальне вікно ==================*/
 
 .backdrop {
   position: fixed;
@@ -630,7 +717,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 525px;
+  width: 528px;
   height: 581px;
   background-color: var(--primary-background);
 }
@@ -654,4 +741,179 @@ img {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+}
+
+/* ============================Модальне вікно ==================*/
+
+/* ====================== Модальна форма ======================== */
+.modal-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px 0 40px;
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modal-form-field-desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17px;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+}
+
+.modal-input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color var(--animation-link);
+  cursor: pointer;
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  fill: var(--primary-text-color);
+  transition: fill var(--animation-link);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-form-message {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color var(--animation-link);
+  cursor: pointer;
+}
+
+.modal-form-message::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-message:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.modal-form-check-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-form-check {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.own-checkbox {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 3px;
+  fill: var(--tertiary-text-color);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  transition: background-color var(--animation-link),
+    border var(--animation-link), border-color var(--animation-link);
+}
+
+.modal-form-check:checked + .own-checkbox {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.modal-form-check:focus + .own-checkbox {
+  border-color: var(--accent-color);
+}
+
+.policy-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  margin-left: 7px;
+}
+
+.submit-button {
+  min-width: 200px;
+  min-height: 50px;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--tertiary-text-color);
+  transition: background-color var(--animation-link),
+    box-shadow var(--animation-link);
+}
+
+.submit-button:focus,
+.submit-button:hover {
+  background-color: var(--hover-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
