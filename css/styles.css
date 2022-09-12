@@ -774,10 +774,11 @@ img {
 }
 .modal-form-field-desc {
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
   margin-bottom: 4px;
+  display: block;
 }
 
 .modal-input-wrapper {
